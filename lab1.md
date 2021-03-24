@@ -17,6 +17,64 @@
 code 01_Serial-Monitor https://github.com/choompol-boonmee/lab63b/blob/master/examples/01_Serial-Monitor/src/main.cpp
 ## การบันทึกผลการทดลอง
 1.ทำการเชื่อมต่อ Microcontroller เข้ากับ Serial
-https://web.facebook.com/messenger_media/?thread_id=100007678182668&attachment_id=136108915105465&message_id=mid.%24cAABa9NoiBQx-lS6AYl4Y-k7pDui7
 
+![image](https://user-images.githubusercontent.com/80879791/112302406-a2a77580-8ccd-11eb-9e05-37f03113dd6b.png)
+
+
+2.ดูตัวอย่างโปรแกรมได้ที่โฟลเดอร์ pattani โดยใช้คำสั่ง CD เมื่อทำหารรันโปรแกรมจะเห็นได้ว่ามีตัวอย่างอยู่ทั้งหมด 9 ตัวอย่าง
+
+![image](https://user-images.githubusercontent.com/80879791/112302886-2eb99d00-8cce-11eb-894e-1e7c9633a405.png)
+
+3.ใช้คำสั่ง cd 01_Serial-Monitor แล้วตามด้วย vi src/main.cpp จะแสดงโค้ดตัวอย่างโปรแกรมที่ใช้ในการทดสอบ Microcontroller
+
+#include <Arduino.h>
+
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+}
+
+void loop()
+{
+	cnt++;
+	Serial.printf("PATTANI :%d\n",cnt);
+	delay(1000);
+}
+
+4.ใช้คำสั่ง vi platformio.ini เพื่อจะบอกว่า Microcontroller นี้บอกว่าเป็น Platform หรือ ผลิตภัณฑ์ของที่ใด Bord ชื่ออะไร เขียนโปรแกรมโดยวิธีการใด
+
+5.ทำการอัปโหลดโปรแกรม 01 Serail moniter ได้จากคำสั่ง pio run -t upload
+
+6.เพื่อให้ Microcontroller รับโปรแกรมใหม่เข้าไปให้กดที่ปุ่มสีดำ เป็นกด set ปุ่มด้านข้าง
+
+![image](https://user-images.githubusercontent.com/80879791/112304149-bb188f80-8ccf-11eb-9f2f-eba04ba76a73.png)
+
+7.หากโปรแกรมขึ้นแสดงผล SUCCESS หมาถึงโปรแกรมพร้อมในการ RUN โดยเราสามารถใช้คำสั่ง pio device moniter เพื่อดูผลลัพธ์ที่แสดงผลออกมาจากมอนิเตอร์
+
+![image](https://user-images.githubusercontent.com/80879791/112304524-2c584280-8cd0-11eb-8e70-d216be7eb889.png)
+
+
+## การบันทึกผลการทดลอง
+จากการ RUN โดยใช้คำสั่ง vi platformio.ini ทำให้เราทราบข้อมูลดังนี้
+
+![image](https://user-images.githubusercontent.com/80879791/112304922-a8eb2100-8cd0-11eb-9eea-f29676964df9.png)
+
+1.Platform ชนิดนี้เป็นของบริษัท espressif8266
+
+2.bord ชนิดนี้ชื่อว่า esp01_1m
+
+3.framework วิธ๊ที่ใช้เขียนโปรแกรมคือวิธี ardino
+
+## อภิปรายผลการทดลอง
+จากการใช้คำสั่ง vi src/main.cpp เป็นโปรแกรมเพื่อทดสอบ ทำให้เราทราบว่าโปรแกรม 01_Serial-Monitor สามารถ RUN ได้ 2 ส่วนดังนี้
+
+1.ส่วนการ set up โปรแกรม
+
+2.ส่วน loop ที่เพิ่มจะเพิ่มตัวแปร count ในแต่ละครั้งเพื่อแสดงผลของตัวแปรโดยมีการหน่วงเวลา 1000 ms โดยการทดลองเมื่อใช้คำสั่ง pio device moniter โดยกหน้าจอจะขึ้นว่ามีนับ count หรือนับขึ้นทุกๆ 1 วินาทีตามโปรแกรม
+
+## คำถามหลังการทดลอง 
+
+-
 
