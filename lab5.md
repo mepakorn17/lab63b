@@ -70,13 +70,13 @@ loop
 
 ![image](https://user-images.githubusercontent.com/80879791/112331837-dbeede00-8ceb-11eb-844d-ba958e6cccd9.png)
 
-5. ใช้เว็บ broserw ในการแสดงผลลัพธ์
+5. ใช้เว็บ browser ในการแสดงผลลัพธ์
 
-6. โดยการให้ copy ip address ไปบราวเซอร์ในการทดสอบแล้วบันทึกผล
+6. โดยการให้ copy ip address ไป browser ในการทดสอบแล้วบันทึกผล
 
 ## การบันทึกผลการทดลอง
 
-จะเห็นว่าจากคำสั่ง pio device monitor เพื่อดูแลลัพธ์ของการ RUN โปรแกรมในไมโครคอนโทรเลอร์จะได้ตัว ip address เป็นตีวเดิม และเมื่อ copy ip address ไปที่บราวเซอร์ก็จะป็น Hello 1 โดย count ก็จะเปลี่ยนตัวแปรไปเรื่อย ๆ
+จะเห็นว่าจากคำสั่ง pio device monitor เพื่อดูผลลัพธ์ของการ RUN โปรแกรมใน Microcontroller จะได้ตัว ip address เป็นตัวเดิม และเมื่อ copy ip address ไปที่บราวเซอร์ก็จะป็น Hello 1 โดย count ก็จะเปลี่ยนตัวแปรไปเรื่อย ๆ
 
 ## อภิปรายผลการทดลอง
 
