@@ -27,21 +27,20 @@ code 01_Serial-Monitor https://github.com/choompol-boonmee/lab63b/blob/master/ex
 
 3.ใช้คำสั่ง cd 01_Serial-Monitor แล้วตามด้วย vi src/main.cpp จะแสดงโค้ดตัวอย่างโปรแกรมที่ใช้ในการทดสอบ Microcontroller
 
+```
 #include <Arduino.h>
-
 int cnt = 0;
-
 void setup()
 {
 	Serial.begin(115200);
 }
-
 void loop()
 {
 	cnt++;
 	Serial.printf("PATTANI :%d\n",cnt);
 	delay(1000);
 }
+```
 
 4.ใช้คำสั่ง vi platformio.ini เพื่อจะบอกว่า Microcontroller นี้บอกว่าเป็น Platform หรือ ผลิตภัณฑ์ของที่ใด Bord ชื่ออะไร เขียนโปรแกรมโดยวิธีการใด
 
