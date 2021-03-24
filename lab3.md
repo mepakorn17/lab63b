@@ -24,7 +24,7 @@
 
 03 run example https://www.youtube.com/watch?v=CCnN1WJsXQY
 
-03 Output-Port https://github.com/choompol-boonmee/lab63b/blob/master/examples/03_Output-Port/src/main.cpp
+code 03 Output-Port https://github.com/choompol-boonmee/lab63b/blob/master/examples/03_Output-Port/src/main.cpp
 
 ## วิธีการทำการทดลอง
 1. เชื่อมต่อ usb to Serial กับสาย adapter พอท 0,1 และต่อ Micorcontroller เข้าไปด้านบนดังรูป
